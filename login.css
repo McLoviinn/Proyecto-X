@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://cdn.leonardo.ai/users/7834fe3a-daa1-41d1-a13f-7d21ddb76e84/generations/14143c2a-d55a-44e6-b430-1ff787b3c4b2/Default_I_am_making_a_website_and_I_need_a_creative_background_1.jpg'); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.background-container {
+  background-image: url('https://cdn.leonardo.ai/users/7834fe3a-daa1-41d1-a13f-7d21ddb76e84/generations/b36b6d67-55c6-4e18-acfa-e69c264a8553/Default_generate_me_a_blurred_background_for_a_gift_box_compan_1.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.login-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
+  width: 300px;
+}
+
+.login-container h2 {
+  margin-bottom: 50px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 93%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.extra-options {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.extra-options a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.extra-options a:hover {
+  text-decoration: underline;
+}
