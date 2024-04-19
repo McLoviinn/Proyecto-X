@@ -30,8 +30,8 @@ header {
     height: 600px;
     background: #bc4e9c;
 
-    background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(../img/portada.jpg);
-    background: linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(../img/portada.jpg);
+    background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(https://cdn.leonardo.ai/users/7834fe3a-daa1-41d1-a13f-7d21ddb76e84/generations/14143c2a-d55a-44e6-b430-1ff787b3c4b2/Default_I_am_making_a_website_and_I_need_a_creative_background_1.jpg);
+    background: linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(https://cdn.leonardo.ai/users/7834fe3a-daa1-41d1-a13f-7d21ddb76e84/generations/14143c2a-d55a-44e6-b430-1ff787b3c4b2/Default_I_am_making_a_website_and_I_need_a_creative_background_1.jpg);
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -145,4 +145,11 @@ main .sobre-nosotros{
 }
 .card p{
     text-align: center;
+}
+
+footer {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
 }

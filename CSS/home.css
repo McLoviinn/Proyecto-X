@@ -202,3 +202,14 @@ footer {
     align-items: center;
 }
 
+.contenedor2 {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contenido2 {
+    max-width: 600px;
+    margin:  200px auto 100px; 
+    text-align: left;
+}
