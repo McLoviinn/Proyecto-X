@@ -202,15 +202,23 @@ footer {
     align-items: center;
 }
 
-.contenedor2 {
+.contenedor {
     width: 80%;
     margin: 0 auto;
     text-align: center;
 }
 
-.contenido2 {
+.contenido {
     max-width: 600px;
     margin:  200px auto 100px; 
     text-align: left;
 }
+
+#carouselExampleAutoplaying .carousel-item img {
+    max-height: 600px; /* Ajusta la altura máxima de las imágenes del carrusel */
+    width: auto; /* Ajusta el ancho de las imágenes al 100% del contenedor */
+    object-position: center; 
+    border: 15px solid #fff;
+}
+
 
