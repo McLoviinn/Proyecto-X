@@ -1,75 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('https://cdn.leonardo.ai/users/7834fe3a-daa1-41d1-a13f-7d21ddb76e84/generations/14143c2a-d55a-44e6-b430-1ff787b3c4b2/Default_I_am_making_a_website_and_I_need_a_creative_background_1.jpg'); 
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .background-container {
-    background-image: url('https://cdn.leonardo.ai/users/7834fe3a-daa1-41d1-a13f-7d21ddb76e84/generations/b36b6d67-55c6-4e18-acfa-e69c264a8553/Default_generate_me_a_blurred_background_for_a_gift_box_compan_1.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .login-container {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
-    width: 300px;
-  }
-  
-  .login-container h2 {
-    margin-bottom: 50px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input[type="email"],
-  input[type="password"] {
-    width: 93%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  
-  button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  .extra-options {
-    margin-top: 10px;
-    text-align: center;
-  }
-  
-  .extra-options a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .extra-options a:hover {
-    text-decoration: underline;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 10px;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://cdn.leonardo.ai/users/7834fe3a-daa1-41d1-a13f-7d21ddb76e84/generations/14143c2a-d55a-44e6-b430-1ff787b3c4b2/Default_I_am_making_a_website_and_I_need_a_creative_background_1.jpg"), #000;
+  background-position: center;
+  background-size: cover;
+}
+.container {
+  max-width: 700px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.container .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  color: white;
+}
+
+.content form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+form .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+form .input-box span.details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.input-box {
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  margin: 15px 0;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+}
+.input-box input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+  font-size: 0.8rem;
+  top: 10px;
+  transform: translateY(-120%);
+}
+
+form .gender-details .gender-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+
+form .category {
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+  justify-content: space-between;
+}
+
+form .category label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+form .category label .dot {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three {
+  background: #9b59b6;
+  border-color: #d9d9d9;
+}
+
+.gender-details{
+  color: #fff;
+}
+
+form input[type="radio"] {
+  display: none;
+}
+
+form .button {
+  height: 45px;
+  margin: 35px 0;
+}
+
+form .button input {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #fff;
+  color: #000;
+}
+
+form .button input:hover {
+  color: #fff;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
