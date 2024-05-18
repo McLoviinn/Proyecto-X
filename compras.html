@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="CSS/compras.css">
+</head>
+<body>
+    <div class="cart">
+        <h2>Carrito de Compras</h2>
+        <ul class="cart-items" id="cartItems">
+            <!-- Los elementos del carrito se agregarán aquí -->
+        </ul>
+        <p class="total">Total: $<span id="total">0.00</span></p>
+        <a href="productos.html" class="btn btn-primary">Volver</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cartItems = document.getElementById('cartItems');
+            const totalElement = document.getElementById('total');
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let total = 0;
+
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.classList.add('cart-item');
+                li.innerHTML = `<span>${item.name}</span><span>Quantity: ${item.quantity}</span><span>$${(item.price * item.quantity).toFixed(2)}</span>`;
+                cartItems.appendChild(li);
+                total += item.price * item.quantity;
+            });
+
+            totalElement.textContent = total.toFixed(2);
+        });
+    </script>
+</body>
+</html>

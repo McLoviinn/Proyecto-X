@@ -7,28 +7,41 @@
     <title>Olivia Details</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="CSS/compras.css"> <!-- Agrega el CSS del carrito -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <script src="JS/carrito.js"></script> <!-- Importa el archivo de JavaScript -->
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="home.html">Inicio</a>
-            <a href="acercade.html">Acerca de</a>
-            <a href="productos.html">Productos</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="login.html">Login</a>
-            
+            <div class="left-nav">
+                <a href="home.html">Inicio</a>
+                <a href="acercade.html">Acerca de</a>
+                <a href="productos.html">Productos</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="login.html">Login</a>
+            </div>
+            <div class="center-nav">
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar">
+                    <button type="submit">Buscar</button>
+                </div>
+            </div>
+            <div class="right-nav">
+                <a href="compras.html" id="cartButton">Carro de Compras</a>
+            </div>
         </nav>
         <section class="textos-header">
             <h1>Productos</h1>
         </section>
-        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
-                style="height: 100%; width: 100%;">
+        <div class="wave" style="height: 150px; overflow: hidden;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
                 <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
                     style="stroke: none; fill: #fff;"></path>
-            </svg></div>
+            </svg>
+        </div>
     </header>
 
     <section class="contenedor sobre-nosotros">
@@ -39,7 +52,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Caja Celestial</h5>
                     <p class="card-text">Regalos que brillan con luz propia, llenos de esplendor.</p>
-                    <a href="#" class="btn btn-primary">Ver detalles</a>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Celestial', 20.00)">Agregar alcarrito</button>
                 </div>
             </div>
             <div class="card">
@@ -48,7 +61,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Caja Encanto</h5>
                     <p class="card-text">Regalos mágicos que cautivan y sorprenden Cada dia.</p>
-                    <a href="#" class="btn btn-primary">Ver detalles</a>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Celestial', 20.00)">Agregar alcarrito</button>
                 </div>
             </div>
             <div class="card">
@@ -57,7 +70,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Caja Esencia</h5>
                     <p class="card-text">Regalos mágicos que hechizan y asombran con su encanto.</p>
-                    <a href="#" class="btn btn-primary">Ver detalles</a>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Celestial', 20.00)">Agregar alcarrito</button>
                 </div>
             </div>
             <div class="card">
@@ -66,7 +79,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Caja Brillante</h5>
                     <p class="card-text">Regalos que iluminan y alegran el día de quien los recibe.</p>
-                    <a href="#" class="btn btn-primary">Ver detalles</a>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Celestial', 20.00)">Agregar alcarrito</button>
                 </div>
             </div>
         </div>
@@ -79,7 +92,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Caja Celestial</h5>
                     <p class="card-text">Regalos que brillan con luz propia, llenos de esplendor.</p>
-                    <a href="#" class="btn btn-primary">Ver detalles</a>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Celestial', 20.00)">Agregar alcarrito</button>
                 </div>
             </div>
             <div class="card">
@@ -88,7 +101,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Caja Encanto</h5>
                     <p class="card-text">Regalos mágicos que cautivan y sorprenden Cada dia.</p>
-                    <a href="#" class="btn btn-primary">Ver detalles</a>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Celestial', 20.00)">Agregar alcarrito</button>
                 </div>
             </div>
             <div class="card">
@@ -97,7 +110,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Caja Esencia</h5>
                     <p class="card-text">Regalos mágicos que hechizan y asombran con su encanto.</p>
-                    <a href="#" class="btn btn-primary">Ver detalles</a>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Celestial', 20.00)">Agregar alcarrito</button>
                 </div>
             </div>
             <div class="card">
@@ -106,7 +119,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Caja Brillante</h5>
                     <p class="card-text">Regalos que iluminan y alegran el día de quien los recibe.</p>
-                    <a href="#" class="btn btn-primary">Ver detalles</a>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Celestial', 20.00)">Agregar alcarrito</button>
                 </div>
             </div>
         </div>
@@ -119,7 +132,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Caja Celestial</h5>
                     <p class="card-text">Regalos que brillan con luz propia, llenos de esplendor.</p>
-                    <a href="#" class="btn btn-primary">Ver detalles</a>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Celestial', 20.00)">Agregar alcarrito</button>
                 </div>
             </div>
             <div class="card">
@@ -128,7 +141,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Caja Encanto</h5>
                     <p class="card-text">Regalos mágicos que cautivan y sorprenden Cada dia.</p>
-                    <a href="#" class="btn btn-primary">Ver detalles</a>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Celestial', 20.00)">Agregar alcarrito</button>
                 </div>
             </div>
             <div class="card">
@@ -137,7 +150,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Caja Esencia</h5>
                     <p class="card-text">Regalos mágicos que hechizan y asombran con su encanto.</p>
-                    <a href="#" class="btn btn-primary">Ver detalles</a>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Celestial', 20.00)">Agregar alcarrito</button>
                 </div>
             </div>
             <div class="card">
@@ -146,9 +159,10 @@
                 <div class="card-body">
                     <h5 class="card-title">Caja Brillante</h5>
                     <p class="card-text">Regalos que iluminan y alegran el día de quien los recibe.</p>
-                    <a href="#" class="btn btn-primary">Ver detalles</a>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Celestial', 20.00)">Agregar alcarrito</button>
                 </div>
             </div>
         </div>
     </section>
     <main>
+    

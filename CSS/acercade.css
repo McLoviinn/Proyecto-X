@@ -80,3 +80,51 @@ header .textos-header{
     width: 100%;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo transparente */
+    backdrop-filter: blur(10px); /* Aplicar desenfoque */
+    padding: 15px 30px; /* Ajustar el espaciado */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px); /* Aplicar desenfoque */
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Cambio de color al pasar el cursor */
+}
+
+.left-nav, .center-nav, .right-nav {
+    display: center;
+}
+
+.center-nav {
+    flex-grow: 1; /* Expande este elemento para llenar el espacio restante */
+}
+
+.right-nav {
+    margin-left: flex; /* Mover la barra de navegación hacia la derecha */
+}
