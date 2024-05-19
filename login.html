@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - www.codingnepalweb.com -->
 <html>
 <head>
   <meta charset="UTF-8">
@@ -9,15 +8,15 @@
 </head>
 <body>
   <div class="wrapper">
-    <form action="#">
+    <form id="loginForm" action="#">
       <h2>Login</h2>
-        <div class="input-field">
-        <input type="text" required>
-        <label>Ingresa tu email</label>
+      <div class="input-field">
+        <input type="text" id="email" required>
+        <label for="email">Ingresa tu email</label>
       </div>
       <div class="input-field">
-        <input type="password" required>
-        <label>Ingresa tu contraseña</label>
+        <input type="password" id="password" required>
+        <label for="password">Ingresa tu contraseña</label>
       </div>
       <div class="forget">
         <label for="remember">
@@ -26,11 +25,15 @@
         </label>
         <a href="Contraseña.html">Olvidaste tu contraseña?</a>
       </div>
+      <div id="errorMessages" class="message-box">
+        <span id="closeMessageBox" class="close-button">&times;</span>
+      </div>
       <button type="submit">Ingresar</button>
       <div class="register">
         <p>¿No tienes una cuenta? <a href="registro.html">Registrate</a></p>
       </div>
     </form>
   </div>
+  <script src="JS/validaciones.js"></script>
 </body>
 </html>

@@ -1,40 +1,101 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
+    margin: 0;
+    background: url("https://cdn.leonardo.ai/users/7834fe3a-daa1-41d1-a13f-7d21ddb76e84/generations/14143c2a-d55a-44e6-b430-1ff787b3c4b2/Default_I_am_making_a_website_and_I_need_a_creative_background_1.jpg"), #000;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .cart {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
+ 
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    margin: 50px auto;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
-.cart h2 {
-    margin: 0 0 10px;
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
 }
-
+.total{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff
+}
 .cart-items {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 20px 0;
+    color: #fff
 }
 
 .cart-item {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
 }
 
 .cart-item span {
-    flex-grow: 1;
+    flex: 1;
+    text-align: center;
+}
+
+.cart-item button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart-item button:hover {
+    background-color: #0056b3;
 }
 
 .total {
-    font-weight: bold;
-    margin-top: 20px;
+    text-align: right;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.btn-primary {
+    background: #fff;
+    border: 2px solid transparent;
+    color: #000;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    transition: 0.3s ease;
+    box-sizing: border-box;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.15);
 }

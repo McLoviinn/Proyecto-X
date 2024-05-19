@@ -12,27 +12,11 @@
         <ul class="cart-items" id="cartItems">
             <!-- Los elementos del carrito se agregarán aquí -->
         </ul>
-        <p class="total">Total: $<span id="total">0.00</span></p>
-        <a href="productos.html" class="btn btn-primary">Volver</a>
+        <p class="total">Total: <span id="total">0.00</span></p>
+        <a href="home.html" class="btn btn-primary">Comprar</a>
+        <a href="home.html" class="btn btn-primary">Volver</a>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const cartItems = document.getElementById('cartItems');
-            const totalElement = document.getElementById('total');
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            let total = 0;
-
-            cart.forEach(item => {
-                const li = document.createElement('li');
-                li.classList.add('cart-item');
-                li.innerHTML = `<span>${item.name}</span><span>Quantity: ${item.quantity}</span><span>$${(item.price * item.quantity).toFixed(2)}</span>`;
-                cartItems.appendChild(li);
-                total += item.price * item.quantity;
-            });
-
-            totalElement.textContent = total.toFixed(2);
-        });
-    </script>
+    <script src="JS/carrito.js" defer></script>
 </body>
 </html>

@@ -128,3 +128,59 @@ nav a {
 .right-nav {
     margin-left: flex; /* Mover la barra de navegación hacia la derecha */
 }
+
+.right-nav img {
+    width: 40px; /* Modifica el ancho de la imagen */
+    height: auto; /* Ajusta la altura automáticamente */
+    margin-right: 10px; /* Añade un margen a la derecha para alinear el contenido */
+}
+
+.right-nav2 img {
+    width: 30px; /* Modifica el ancho de la imagen */
+    height: auto; /* Ajusta la altura automáticamente */
+    margin-right: 10px; /* Añade un margen a la derecha para alinear el contenido */
+}
+
+.card {
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #666;
+}
+
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664));
+    background: linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664));
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#scrollTopBtn:hover {
+    background: linear-gradient(to right, hsla(0, 0%, 0%, 0.459), hsla(317, 45%, 52%, 0.664));
+}
