@@ -1,0 +1,181 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivia Details</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/productos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <script src="JS/carrito.js"></script> 
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left-nav">
+                <a href="{% url 'home' %}">Inicio</a>
+                <a href="{% url 'acercade' %}">Acerca de</a>
+                <a href="{% url 'productos' %}">Productos</a>
+                <a href="{% url 'contacto' %}">Contacto</a>
+            </div>
+            <div class="center-nav">
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar">
+                    <button type="submit">Buscar</button>
+                </div>
+            </div>
+            <div class="right-nav">
+                <a href="{% url 'compras' %}">
+                    <img src="https://cdn-icons-png.flaticon.com/128/6713/6713723.png" alt="Carro de Compras">
+                </a>
+            </div>
+        </div>
+        <div class="right-nav2">
+            <a href="{% url 'login' %}">
+                <img src="https://cdn-icons-png.flaticon.com/128/64/64572.png" alt="Login">
+            </a>
+        </div>
+        </nav>
+        <section class="textos-header">
+            <h1>Productos</h1>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg>
+        </div>
+    </header>
+
+    <section class="contenedor sobre-nosotros">
+        <div class="contenedor-sobre-nosotros">
+            <div class="card">
+                <img src="https://cdn.leonardo.ai/users/55148db1-2264-43b0-878a-64254466be60/generations/f0d03ac3-7b06-4ab0-b258-999e021a0c40/Default_create_a_box_with_gifts_inside_called_Charm_Box_apply_0.jpg"
+                    alt="Producto 1">
+                <div class="card-body">
+                    <h5 class="card-title">Caja Celestial</h5>
+                    <p class="card-text">Regalos que brillan con luz propia, llenos de esplendor.</p>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Celestial', 20000)">Agregar alcarrito</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.leonardo.ai/users/55148db1-2264-43b0-878a-64254466be60/generations/caaa5125-95f4-452d-86b2-ab05e23ad37c/Default_create_a_box_with_gifts_inside_called_Charm_Box_apply_0.jpg"
+                    alt="Producto 2">
+                <div class="card-body">
+                    <h5 class="card-title">Caja Encanto</h5>
+                    <p class="card-text">Regalos mágicos que cautivan y sorprenden Cada dia.</p>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Encanto', 30000)">Agregar alcarrito</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.leonardo.ai/users/55148db1-2264-43b0-878a-64254466be60/generations/6d7eeaac-535e-4d10-bf9d-928559f59667/Default_create_a_box_with_gifts_inside_called_Charm_Box_apply_1.jpg"
+                    alt="Producto 3">
+                <div class="card-body">
+                    <h5 class="card-title">Caja Esencia</h5>
+                    <p class="card-text">Regalos mágicos que hechizan y asombran con su encanto.</p>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Esencia', 25000)">Agregar alcarrito</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.leonardo.ai/users/55148db1-2264-43b0-878a-64254466be60/generations/6d7eeaac-535e-4d10-bf9d-928559f59667/Default_create_a_box_with_gifts_inside_called_Charm_Box_apply_2.jpg"
+                    alt="Producto 4">
+                <div class="card-body">
+                    <h5 class="card-title">Caja Brillante</h5>
+                    <p class="card-text">Regalos que iluminan y alegran el día de quien los recibe.</p>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Brillante', 15000)">Agregar alcarrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contenedor sobre-nosotros">
+        <div class="contenedor-sobre-nosotros">
+            <div class="card">
+                <img src="https://cdn.leonardo.ai/users/55148db1-2264-43b0-878a-64254466be60/generations/be084c7e-1f1d-4a16-93d7-0786531fbb76/Default_create_a_box_with_gifts_inside_called_Charm_Box_apply_0.jpg"
+                    alt="Producto 1">
+                <div class="card-body">
+                    <h5 class="card-title">Caja Magia</h5>
+                    <p class="card-text">Regalos que convierten lo ordinario en algo mágico.</p>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Magia', 22500)">Agregar alcarrito</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.leonardo.ai/users/55148db1-2264-43b0-878a-64254466be60/generations/be084c7e-1f1d-4a16-93d7-0786531fbb76/Default_create_a_box_with_gifts_inside_called_Charm_Box_apply_1.jpg"
+                    alt="Producto 2">
+                <div class="card-body">
+                    <h5 class="card-title">Caja Maravilla</h5>
+                    <p class="card-text">Regalos que sorprenden con asombro y admiración constante.</p>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Maravilla', 25000)">Agregar alcarrito</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.leonardo.ai/users/55148db1-2264-43b0-878a-64254466be60/generations/be084c7e-1f1d-4a16-93d7-0786531fbb76/Default_create_a_box_with_gifts_inside_called_Charm_Box_apply_2.jpg"
+                    alt="Producto 3">
+                <div class="card-body">
+                    <h5 class="card-title">Caja Destello</h5>
+                    <p class="card-text">Regalos que iluminan momentos especiales con su fulgor.</p>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Destello', 20000)">Agregar alcarrito</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.leonardo.ai/users/55148db1-2264-43b0-878a-64254466be60/generations/be084c7e-1f1d-4a16-93d7-0786531fbb76/Default_create_a_box_with_gifts_inside_called_Charm_Box_apply_3.jpg"
+                    alt="Producto 4">
+                <div class="card-body">
+                    <h5 class="card-title">Caja Sublime</h5>
+                    <p class="card-text">Regalos que elevan la experiencia a otro nivel de perfección.</p>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Sublime', 35000)">Agregar alcarrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contenedor sobre-nosotros">
+        <div class="contenedor-sobre-nosotros">
+            <div class="card">
+                <img src="https://cdn.leonardo.ai/users/55148db1-2264-43b0-878a-64254466be60/generations/634c2ef7-cdf0-45ae-bf47-ccf640f37e21/Default_create_a_box_with_gifts_inside_called_Charm_Box_apply_0.jpg"
+                    alt="Producto 1">
+                <div class="card-body">
+                    <h5 class="card-title">Caja Armonía</h5>
+                    <p class="card-text">Regalos que crean una sinfonía perfecta de felicidad.</p>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Armonía', 20000)">Agregar alcarrito</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.leonardo.ai/users/55148db1-2264-43b0-878a-64254466be60/generations/634c2ef7-cdf0-45ae-bf47-ccf640f37e21/Default_create_a_box_with_gifts_inside_called_Charm_Box_apply_1.jpg"
+                    alt="Producto 2">
+                <div class="card-body">
+                    <h5 class="card-title">Caja Radiante</h5>
+                    <p class="card-text">Regalos que irradian alegría y luminosidad deslumbrante.</p>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Radiante', 230000)">Agregar alcarrito</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.leonardo.ai/users/55148db1-2264-43b0-878a-64254466be60/generations/634c2ef7-cdf0-45ae-bf47-ccf640f37e21/Default_create_a_box_with_gifts_inside_called_Charm_Box_apply_3.jpg"
+                    alt="Producto 3">
+                <div class="card-body">
+                    <h5 class="card-title">Caja Euforia</h5>
+                    <p class="card-text">Regalos que desbordan pura alegría y entusiasmo inmenso.</p>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Euforia', 24000)">Agregar alcarrito</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.leonardo.ai/users/55148db1-2264-43b0-878a-64254466be60/generations/634c2ef7-cdf0-45ae-bf47-ccf640f37e21/Default_create_a_box_with_gifts_inside_called_Charm_Box_apply_2.jpg"
+                    alt="Producto 4">
+                <div class="card-body">
+                    <h5 class="card-title">Caja Serenidad</h5>
+                    <p class="card-text">Regalos que brindan paz y momentos de tranquilidad.</p>
+                    <button class="btn btn-primary" onclick="agregarAlCarrito('Caja Serenidad', 32000)">Agregar alcarrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main>
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Volver arriba">↑</button>
+    <script src="{% static 'js/navegacion.js' %}"></script>
+    <script src="{% static 'js/carrito.js' %}"></script>
+</body>
+
+</html>

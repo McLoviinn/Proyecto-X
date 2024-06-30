@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivia Details - Sobre Nosotros</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/acercade.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left-nav">
+                <a href="{% url 'home' %}">Inicio</a>
+                <a href="{% url 'acercade' %}">Acerca de</a>
+                <a href="{% url 'productos' %}">Productos</a>
+                <a href="{% url 'contacto' %}">Contacto</a>
+            </div>
+            <div class="center-nav">
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar">
+                    <button type="submit">Buscar</button>
+                </div>
+            </div>
+            <div class="right-nav">
+                <a href="{% url 'compras' %}">
+                    <img src="https://cdn-icons-png.flaticon.com/128/6713/6713723.png" alt="Carro de Compras">
+                </a>
+            </div>
+        </div>
+        <div class="right-nav2">
+            <a href="{% url 'login' %}">
+                <img src="https://cdn-icons-png.flaticon.com/128/64/64572.png" alt="Login">
+            </a>
+        </div>
+        </nav>
+        <section class="textos-header">
+            <h1>Sobre Nosotros</h1>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg></div>
+    </header>
+
+    <section class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Nuestra Historia</h2>
+                            <p class="card-text">Olivia Details nació de la pasión por ofrecer productos de calidad y servicios excepcionales. Desde nuestros humildes comienzos, nos hemos comprometido a satisfacer las necesidades de nuestros clientes con dedicación y profesionalismo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Nuestro Equipo</h2>
+                            <p class="card-text">Detrás de Olivia Details hay un equipo apasionado y dedicado que trabaja arduamente para garantizar la excelencia en cada aspecto de nuestro negocio. Nos enorgullece nuestro equipo y su compromiso con nuestros valores fundamentales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Nuestra Misión</h2>
+                            <p class="card-text">Nuestra misión en Olivia Details es simple pero poderosa: proporcionar productos de alta calidad que mejoren la vida de nuestros clientes y brindar un servicio excepcional que exceda sus expectativas. Estamos comprometidos con la excelencia en todo lo que hacemos.</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Volver arriba">↑</button>
+    <script src="JS/navegacion.js"></script>
+</body>
+
+</html>

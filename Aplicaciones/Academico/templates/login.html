@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Olivia Details</title>
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+</head>
+<body>
+  <div class="wrapper">
+    <form id="loginForm" action="#">
+      <h2>Login</h2>
+      <div class="input-field">
+        <input type="text" id="email" required>
+        <label for="email">Ingresa tu email</label>
+      </div>
+      <div class="input-field">
+        <input type="password" id="password" required>
+        <label for="password">Ingresa tu contraseña</label>
+      </div>
+      <div class="forget">
+        <label for="remember">
+          <input type="checkbox" id="remember">
+          <p>Recordarme</p>
+        </label>
+        <a href="{% url 'Contraseña' %}">Olvidaste tu contraseña?</a>
+      </div>
+      <div id="errorMessages" class="message-box">
+        <span id="closeMessageBox" class="close-button">&times;</span>
+      </div>
+      <button type="submit">Ingresar</button>
+      <div class="register">
+        <p>¿No tienes una cuenta? <a href="{% url 'registro' %}">Registrate</a></p>
+      </div>
+    </form>
+  </div>
+  <script src="JS/validaciones.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="{% static 'css/compras.css' %}">
+</head>
+<body>
+    <div class="cart">
+        <h2>Carrito de Compras</h2>
+        <ul class="cart-items" id="cartItems">
+            <!-- Los elementos del carrito se agregarán aquí -->
+        </ul>
+        <p class="total">Total: <span id="total">0.00</span></p>
+        <a href="{% url 'home' %}" class="btn btn-primary">Comprar</a>
+        <a href="{% url 'home' %}" class="btn btn-primary">Volver</a>
+    </div>
+
+    <script src="{% static 'js/carrito.js' %}" defer></script>
+</body>
+</html>

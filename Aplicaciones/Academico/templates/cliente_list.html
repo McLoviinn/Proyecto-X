@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Clientes</title>
+</head>
+<body>
+    <h1>Lista de Clientes</h1>
+    <ul>
+    {% for cliente in clientes %}
+        <li><a href="{% url 'cliente_detail' cliente.pk %}">{{ cliente.nombre }}</a></li>
+    {% endfor %}
+    </ul>
+    <a href="{% url 'cliente_new' %}">Nuevo Cliente</a>
+</body>
+</html>
+<!-- templates/academico/cliente_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del Cliente</title>
+</head>
+<body>
+    <h1>Detalle del Cliente</h1>
+    <p><strong>Nombre:</strong> {{ cliente.nombre }}</p>
+    <p><strong>Email:</strong> {{ cliente.email }}</p>
+    <a href="{% url 'cliente_edit' cliente.pk %}">Editar</a>
+    <form action="{% url 'cliente_delete' cliente.pk %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Eliminar">
+    </form>
+    <a href="{% url 'cliente_list' %}">Volver a la lista</a>
+</body>
+</html>
+<!-- templates/academico/cliente_edit.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% if form.instance.pk %}Editar Cliente{% else %}Nuevo Cliente{% endif %}</title>
+</head>
+<body>
+    <h1>{% if form.instance.pk %}Editar Cliente{% else %}Nuevo Cliente{% endif %}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Guardar">
+    </form>
+</body>
+</html>
+<!-- templates/academico/cliente_confirm_delete.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmar Eliminación</title>
+</head>
+<body>
+    <h1>¿Estás seguro de eliminar al cliente "{{ cliente.nombre }}"?</h1>
+    <form action="{% url 'cliente_delete' cliente.pk %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Eliminar">
+    </form>
+    <a href="{% url 'cliente_detail' cliente.pk %}">Cancelar</a>
+</body>
+</html>
