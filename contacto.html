@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivia Details - Contacto</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/contacto.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<style>
+    #map {
+        height: 400px;
+    }
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<body>
+    <header>
+        <nav>
+            <div class="left-nav">
+                <a href="home.html">Inicio</a>
+                <a href="acercade.html">Acerca de</a>
+                <a href="productos.html">Productos</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="center-nav">
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar">
+                    <button type="submit">Buscar</button>
+                </div>
+            </div>
+            <div class="right-nav">
+                <a href="Compras.html">
+                    <img src="https://cdn-icons-png.flaticon.com/128/6713/6713723.png" alt="Carro de Compras">
+                </a>
+            </div>
+        </div>
+        <div class="right-nav2">
+            <a href="login.html">
+                <img src="https://cdn-icons-png.flaticon.com/128/64/64572.png" alt="Login">
+            </a>
+        </div>
+        </nav>
+        <section class="textos-header">
+            <h1>Contacto</h1>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg></div>
+    </header>
+    <section class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Ubicación</h2>
+                            <p class="card-text">Av. Presidente José Batlle Y Ordóñez 4189</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Teléfono</h2>
+                            <p class="card-text">+569 44567890</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Correo Electrónico</h2>
+                            <p class="card-text">info@oliviadetails.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Mapa</h2>
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" defer></script>
+    <script src="JS/apimap.js"></script>
+</body>
+<html>
+  <head>
+    <title>Simple Marker Icons</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <!-- 
+      The `defer` attribute causes the script to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises. See
+      https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+      for more information.
+      -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
+  </body>
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="Volver arriba">↑</button>
+  <script src="JS/navegacion.js"></script>
+</body>
+
+</html

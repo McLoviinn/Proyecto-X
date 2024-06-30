@@ -1,0 +1,496 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'open sans';
+}
+
+.contenedor {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo {
+    color: #642a73;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 600px;
+    background: #bc4e9c;
+    background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(https://cdn.leonardo.ai/users/7834fe3a-daa1-41d1-a13f-7d21ddb76e84/generations/14143c2a-d55a-44e6-b430-1ff787b3c4b2/Default_I_am_making_a_website_and_I_need_a_creative_background_1.jpg);
+    background: linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(https://cdn.leonardo.ai/users/7834fe3a-daa1-41d1-a13f-7d21ddb76e84/generations/14143c2a-d55a-44e6-b430-1ff787b3c4b2/Default_I_am_making_a_website_and_I_need_a_creative_background_1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+
+nav > a{
+    color:#fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+nav > a:hover{
+    text-decoration: underline;
+}
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 50px;
+    color:#fff;
+}
+
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 300;
+    color:#fff;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* About us */
+
+main .sobre-nosotros{
+    padding: 30px 0 60px 0;
+}
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagen-about-us{
+    width: 48%;
+}
+
+.sobre-nosotros .contenido-textos{
+    width: 48%;
+}
+
+.contenido-textos h3{
+    margin-bottom: 15px;
+}
+
+.contenido-textos h3 span{
+    background: #4d0686;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 5px;
+}
+
+.contenido-textos p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* CARD */
+
+.card {
+    margin: 20px;
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow 0.3s ease; 
+    width: 18rem; 
+    display: flex;
+    flex-direction: column; 
+}
+
+.card:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 20px; 
+}
+
+.card .btn {
+    display: block; 
+    margin-top: 15px; 
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px; 
+    border-top-right-radius: 8px;
+}
+
+.imagen-port{
+    width: 95%;
+}
+
+/* Clients */
+
+.cards1 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cards1 .card1 {
+    background: #4d0686;
+    display: flex;
+    width: 46%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.cards1 .card1 img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+}
+
+.cards1 .card1 > .contenido-texto-card {
+    width: 60%;
+    color: #fff;
+}
+
+.cards1 .card1 > .contenido-texto-card p {
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+footer {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.contenedor {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contenido {
+    max-width: 600px;
+    margin:  200px auto 100px; 
+    text-align: left;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo transparente */
+    backdrop-filter: blur(10px); /* Aplicar desenfoque */
+    padding: 15px 30px; /* Ajustar el espaciado */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px); /* Aplicar desenfoque */
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Cambio de color al pasar el cursor */
+}
+
+.left-nav, .center-nav, .right-nav {
+    display: center;
+}
+
+.center-nav {
+    flex-grow: 1; /* Expande este elemento para llenar el espacio restante */
+}
+
+.right-nav {
+    margin-left: flex; /* Mover la barra de navegación hacia la derecha */
+}
+
+.cards1 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cards1 .card1 {
+    background: #4d0686;
+    display: flex;
+    width: 46%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.cards1 .card1 img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+}
+
+.cards1 .card1 > .contenido-texto-card {
+    width: 60%;
+    color: #fff;
+}
+
+.cards1 .card1 > .contenido-texto-card p {
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+footer {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.contenedor {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contenido {
+    max-width: 600px;
+    margin:  200px auto 100px; 
+    text-align: left;
+}
+
+#carouselExampleAutoplaying .carousel-item img {
+    max-height: 470px; 
+    width: auto; 
+    object-position: center; 
+    border: solid #fff;
+}
+
+
+.carousel-item {
+    display: flex;
+    justify-content: center;
+}
+
+.card1 {
+    background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664));
+    background: linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664));
+    width: 75%; /* Ajusta el ancho de las tarjetas */
+    height: 190px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+
+    margin-left: auto; /* Mueve las tarjetas hacia la derecha */
+    margin-right: auto; /* Mueve las tarjetas hacia la derecha */
+}
+
+.card1 img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Cambia el color de fondo de las flechas */
+}
+
+.carousel-item .card1 {
+    color: #fff; /* Cambia el color de las letras a blanco */
+}
+
+
+.featured-grid-section-title {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664));
+    background: linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664));
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding: 15px 20px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.featured-grid-section-title img {
+    width: 30px;
+
+}
+
+.right-nav img {
+    width: 40px; /* Modifica el ancho de la imagen */
+    height: auto; /* Ajusta la altura automáticamente */
+    margin-right: 10px; /* Añade un margen a la derecha para alinear el contenido */
+}
+
+.right-nav2 img {
+    width: 30px; /* Modifica el ancho de la imagen */
+    height: auto; /* Ajusta la altura automáticamente */
+    margin-right: 10px; /* Añade un margen a la derecha para alinear el contenido */
+}
+
+
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664));
+    background: linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664));
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#scrollTopBtn:hover {
+    background: linear-gradient(to right, hsla(0, 0%, 0%, 0.459), hsla(317, 45%, 52%, 0.664));
+}
+
+#chatIcon {
+    position: fixed;
+    top: 80%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 1000;
+    cursor: pointer;
+    max-width: 100px; /* Establecer el ancho máximo */
+    max-height: 100px; /* Establecer la altura máxima */
+}
+
+#chatIcon img {
+    max-width: 75%; /* Ajustar el ancho máximo de la imagen */
+    height: auto; /* Permitir que la altura se ajuste automáticamente */
+}
+
+
+/* Estilos para el modal del chat */
+#chatModal {
+    font-family: Arial, sans-serif;
+}
+
+#chatTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#chatMessages {
+    max-height: 300px; /* Altura máxima del área de mensajes */
+    overflow-y: 30; /* Barra de desplazamiento vertical */
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#userInput {
+    width: calc(100% - 80px); /* Ancho del campo de entrada de texto */
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#userInput:focus {
+    outline: none; /* Quita el borde de enfoque */
+}
+
+#chatBox button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#chatBox button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+
+.descuento-img {
+    width: 50px; /* Ancho deseado */
+    height: auto; /* Altura ajustada automáticamente según el ancho */
+    position: absolute; /* Posición absoluta para colocarla en un lugar específico dentro de la tarjeta */
+    top: 10px; /* Distancia desde la parte superior */
+    right: 10px; /* Distancia desde el lado derecho */
+}
+
